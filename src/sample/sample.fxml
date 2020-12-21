@@ -9,35 +9,45 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="309.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label layoutX="31.0" layoutY="93.0" text="Ответ: ">
-         <font>
-            <Font name="System Bold" size="31.0" />
-         </font>
-      </Label>
-      <Label fx:id="answerLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="174.0" layoutY="74.0" prefHeight="80.0" prefWidth="61.0" text="0">
-         <font>
-            <Font name="System Bold" size="54.0" />
-         </font>
-      </Label>
-      <Label fx:id="textAnswer" alignment="CENTER" layoutX="9.0" layoutY="174.0" text="Введите число:" textOverrun="WORD_ELLIPSIS">
-         <font>
-            <Font size="26.0" />
-         </font>
-      </Label>
-      <TextField fx:id="userAnswer" layoutX="18.0" layoutY="217.0">
+      <TextField fx:id="userAnswer" layoutX="18.0" layoutY="176.0" onAction="#doUserAction" onMouseDragEntered="#doUserAction" prefHeight="48.0" prefWidth="282.0">
          <font>
             <Font size="22.0" />
          </font>
       </TextField>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="83.0" layoutY="314.0" mnemonicParsing="false" onAction="#doUserAction" text="Угадать">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="239.0" mnemonicParsing="false" onAction="#doUserAction" text="Угадать">
          <font>
             <Font size="27.0" />
          </font>
       </Button>
-      <Text layoutX="28.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Игра: &quot;Угадай Число&quot;">
+      <Text layoutX="9.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Игра: &quot;Угадай Число от 0 до 9&quot; " wrappingWidth="248.6484375">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Text>
+      <Label alignment="CENTER" layoutX="22.0" layoutY="149.0" text="Введите число:" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="27.0" layoutY="70.0" text="Ответ:" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Cambria Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="textAnswerCheat" alignment="CENTER" layoutX="148.0" layoutY="47.0" prefHeight="82.0" prefWidth="81.0" text="0" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Cambria Bold" size="66.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="326.0" mnemonicParsing="false" onAction="#cheatAnswer" prefHeight="57.0" prefWidth="282.0" text="Схитрить">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" cancelButton="true" contentDisplay="CENTER" layoutX="269.0" layoutY="3.0" mnemonicParsing="false" onAction="#closeButton" prefHeight="35.0" prefWidth="36.0" style="-fx-background-color: red;" text="X" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
